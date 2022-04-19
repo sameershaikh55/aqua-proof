@@ -1,0 +1,24 @@
+{
+	"urls": [
+		{
+			"text": "Home",
+			"link": "/"
+		},
+		{
+			"text": "About Us",
+			"link": "/about_us"
+		},
+		{
+			"text": "Services",
+			"link": "/services"
+		},
+		{
+			"text": "Gallery",
+			"link": "/gallery"
+		},
+		{
+			"text": "Contact Us",
+			"link": "/contact"
+		}
+	]
+}
