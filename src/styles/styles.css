@@ -183,7 +183,7 @@ html {
   top: 0%;
   width: 100%;
   padding: 1rem 0rem 0.4rem 0rem;
-  z-index: 2;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,6 +203,10 @@ html {
   color: #35363f;
 }
 
+.header_container .hamb_cross {
+  height: 28px;
+}
+
 .header_container.sticky {
   -webkit-box-shadow: 1px 1px 8px #cccccc75;
           box-shadow: 1px 1px 8px #cccccc75;
@@ -216,6 +220,88 @@ html {
   height: 102px;
 }
 
+/* ==================== SideBAR STYLING END ======================== */
+.SideBarContainer {
+  margin-top: 64px;
+  position: fixed;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#121924), color-stop(700%, rgba(18, 25, 36, 0)));
+  background: linear-gradient(180deg, #121924 0%, rgba(18, 25, 36, 0) 700%);
+  height: 100vh;
+  z-index: 2;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.SideBarContainer .logo {
+  position: absolute;
+  top: 1%;
+  left: 3%;
+}
+
+.SideBarContainer .logo img {
+  width: 120px;
+}
+
+.SideBarContainer .get_started button {
+  background: #ff8811;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  height: 36px;
+  width: 120px;
+  border: none;
+}
+
+.SideBarContainer ul {
+  margin-top: 56px;
+  padding-left: 0rem;
+  margin-bottom: 0px;
+}
+
+.SideBarContainer ul li {
+  margin-bottom: 32px;
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.SideBarContainer ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+.SideBarContainer ul li .activeNav::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  height: 10%;
+  width: 100%;
+  background-color: #007bbc;
+  border-radius: 5px;
+}
+
+.CrossBTn {
+  position: absolute;
+  top: 7%;
+  right: 6.5%;
+  cursor: pointer;
+  height: 25px;
+}
+
+/* ==================== SideBAR STYLING END ======================== */
 .hero_Container {
   position: relative;
 }
@@ -360,6 +446,10 @@ html {
 
 .services_taken_figures_container .services_taken_figures_states .col-4:nth-last-child(1) {
   border-left: 2px solid #70707031;
+}
+
+.location_container iframe {
+  min-height: 400px;
 }
 
 .vision_speciality_container {
@@ -578,5 +668,91 @@ html {
   right: 0%;
   bottom: -16px;
   font-size: 12px;
+}
+
+@media screen and (max-width: 786px) {
+  .header_container img {
+    max-width: 80px;
+  }
+  .header_under {
+    height: 75px;
+  }
+  .hero_Container .mySwiper .swiper-slide img {
+    height: 340px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero_Container .mySwiper .swiper-button-next:after,
+  .hero_Container .mySwiper .swiper-button-prev:after {
+    font-size: 25px;
+  }
+  .hero_Container .mySwiper .swiper-button-next {
+    padding: 0rem 2.6rem 0rem 1.2rem;
+  }
+  .hero_Container .mySwiper .swiper-button-prev {
+    padding: 0rem 1.2rem 0rem 2.6rem;
+  }
+  .hero_Container .mySwiper .swiper-button-next,
+  .hero_Container .mySwiper .swiper-button-prev {
+    top: 42%;
+  }
+  .hero_Container .mySwiper .swiper-pagination-bullet {
+    height: 7px;
+  }
+  .hero_Container .mySwiper .swiper-pagination-bullet {
+    width: 22px;
+  }
+  .service_projects_container .below_description {
+    max-width: 100%;
+  }
+  .clients_container .swiper-backface-hidden .swiper-slide {
+    padding: 1rem 0.8rem 2rem 0.8rem;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 2px !important;
+  }
+  .gallery_page_container .gallery_detail {
+    -webkit-transform: translate(-8%, -50%);
+            transform: translate(-8%, -50%);
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .service_projects_container .service_card img {
+    max-width: 70px;
+  }
+  .service_projects_container .service_card {
+    min-height: 250px;
+  }
+  .services_taken_figures_container::after {
+    height: 72%;
+  }
+  .services_taken_figures_container .services_taken_figures_states {
+    height: 85px;
+  }
+  .footer_container .logo_cont {
+    padding-top: 0.5rem;
+    max-width: 120px;
+  }
+  .about_page_container .row .about_card img {
+    min-height: 180px;
+  }
+  .gallery_page_container .gallery_detail {
+    position: static;
+    width: 100%;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  .contact_page_inner_container {
+    padding: 3rem 0rem 4rem 0rem;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #dfeefb), color-stop(40%, whitesmoke));
+    background: linear-gradient(180deg, #dfeefb 40%, whitesmoke 40%);
+  }
+  .contact_page_inner_container .list img {
+    max-width: 20px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

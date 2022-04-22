@@ -62,10 +62,10 @@ const Services = () => {
 					</p>
 					<br />
 					<br />
-					<div className="row gy-5 gx-5">
+					<div className="row gy-4 gy-md-5 gx-md-5">
 						{services.map((content, i) => {
 							return (
-								<div className="col-4" key={i}>
+								<div className="col-12 col-sm-6 col-md-4" key={i}>
 									<div className="service_card">
 										<img className="w-100" src={content.img} alt="" />
 										<div className="py-3 px-3">

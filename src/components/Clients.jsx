@@ -11,11 +11,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Navigation, Autoplay, Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 
 const Clients = () => {
 	const sliderData = [i1, i2, i3, i4, i5];
@@ -23,17 +22,30 @@ const Clients = () => {
 	return (
 		<ComponentLayout parentClass="clients_container">
 			<h1 className="color1 text-center fw-bold">Our Clients</h1>
-			<br />
+			<br className="d-none d-md-block" />
 
 			<Swiper
-				slidesPerView={5}
+				slidesPerView={1}
 				pagination={true}
-				navigation={true}
 				autoplay={{
 					delay: 2500,
 					disableOnInteraction: false,
 				}}
-				modules={[Navigation, Autoplay, Pagination]}
+				breakpoints={{
+					640: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					768: {
+						slidesPerView: 4,
+						spaceBetween: 40,
+					},
+					1024: {
+						slidesPerView: 5,
+						spaceBetween: 50,
+					},
+				}}
+				modules={[Autoplay, Pagination]}
 				className="mySwiper"
 			>
 				{sliderData.map((content, i) => {

@@ -32,11 +32,11 @@ const Footer = () => {
 		<>
 			<ComponentLayout parentClass="footer_container">
 				<div className="d-flex justify-content-center">
-					<img src={logo} alt="" />
+					<img className="logo_cont" src={logo} alt="" />
 				</div>
 				<hr className="bg-light" />
-				<div className="row">
-					<div className="col-2 text-white">
+				<div className="row gy-4">
+					<div className="col-md-2 d-none d-md-block text-white">
 						<span className="f20 fw-bold">Contact Us</span>
 						<br />
 						<div className="py-1">
@@ -56,8 +56,8 @@ const Footer = () => {
 							</a>
 						</div>
 					</div>
-					<div className="col-7">
-						<ul className="list-unstyled ps-5 ms-5 d-flex justify-content-center gap-4">
+					<div className="col-md-7">
+						<ul className="list-unstyled ps-md-5 ms-md-5 d-flex flex-wrap justify-content-center gap-3 gap-md-4">
 							{urls.urls.map((content, i) => {
 								return (
 									<li key={i}>
@@ -72,7 +72,7 @@ const Footer = () => {
 							})}
 						</ul>
 
-						<ul className="share_icons_container list-unstyled ps-5 ms-5 d-flex justify-content-center gap-4">
+						<ul className="share_icons_container list-unstyled ps-md-5 ms-md-5 d-flex justify-content-center gap-4">
 							{shareIcons.map((content, i) => {
 								return (
 									<li key={i} className="share_icon">
@@ -84,7 +84,29 @@ const Footer = () => {
 							})}
 						</ul>
 					</div>
-					<div className="col-3">
+
+					<div className="col-12 d-block d-md-none text-white">
+						<span className="f20 fw-bold">Contact Us</span>
+						<br />
+						<div className="py-1">
+							<a
+								className="text-white text-decoration-none h5"
+								href="tel:+01234567890"
+							>
+								+01234567890
+							</a>
+						</div>
+						<div className="py-1">
+							<a
+								className="text-white text-decoration-none h5"
+								href="tel:+01234567890"
+							>
+								+01234567890
+							</a>
+						</div>
+					</div>
+
+					<div className="col-12 col-md-3">
 						<span className="fw600 text-white fw-bold f20">Address:</span>
 						<br />
 						<span className="text-white fw500">

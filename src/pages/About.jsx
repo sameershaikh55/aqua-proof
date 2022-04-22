@@ -39,7 +39,7 @@ const About = () => {
 					<div className="row gy-4">
 						{aboutCards.map((content, i) => {
 							return (
-								<div className="col-4" key={i}>
+								<div className="col-6 col-md-4" key={i}>
 									<div className="about_card">
 										<img className="w-100" src={content.img} alt="" />
 										<p className="text-white fw600">{content.text}</p>

@@ -8,7 +8,11 @@ const ComponentLayout = ({ parentClass, children }) => {
 					(parentClass === "header_container" && "w-100") || ""
 				}`}
 			>
-				<div className="container-fluid">{children}</div>
+				<div className="container-fluid">
+					<div className="row">
+						<div className="col-11 col-md-12 mx-auto">{children}</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

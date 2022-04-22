@@ -3,8 +3,10 @@ import ComponentLayout from "../layout/ComponentLayout";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 import urls from "./urls.json";
+import hamburger from "../assets/images/hamburger.svg";
+import cross from "../assets/images/cross.svg";
 
-const Header = () => {
+const Header = ({ ClickEvent, isOpen }) => {
 	// FOR NAVBAR SCROLLING EFFECT START
 	window.addEventListener("scroll", function () {
 		var header = document.querySelector(".header_container");
@@ -16,13 +18,32 @@ const Header = () => {
 
 	return (
 		<ComponentLayout parentClass="header_container">
-			<div className="d-flex justify-content-between align-items-end w-100">
+			<div className="d-flex justify-content-between align-items-center align-items-md-end w-100">
 				<div>
 					<Link to="/">
 						<img src={logo} alt="logo" />
 					</Link>
 				</div>
-				<ul className="list-unstyled d-flex gap-4 mb-1">
+
+				<div className="d-block d-sm-none">
+					{(isOpen && (
+						<img
+							className="hamb_cross"
+							onClick={ClickEvent}
+							src={cross}
+							alt=""
+						/>
+					)) || (
+						<img
+							className="hamb_cross"
+							onClick={ClickEvent}
+							src={hamburger}
+							alt=""
+						/>
+					)}
+				</div>
+
+				<ul className="list-unstyled d-none d-md-flex gap-4 mb-1">
 					{urls.urls.map((content, i) => {
 						return (
 							<li key={i}>

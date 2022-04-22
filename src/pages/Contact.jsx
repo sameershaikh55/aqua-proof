@@ -109,13 +109,13 @@ const Contact = () => {
 		<Layout>
 			<ComponentLayout parentClass="about_page_container">
 				<div className="py-5">
-					<h1 className="text-center fw-bold color1">Contact Us</h1>
+					<h1 className="text-center fw-bold color1 mb-0">Contact Us</h1>
 				</div>
 			</ComponentLayout>
 
 			<ComponentLayout parentClass="contact_page_inner_container">
-				<div className="row">
-					<div className="col-6">
+				<div className="row gy-5">
+					<div className="col-12 col-md-6">
 						<h2 className="fw-bold">Let's connect Us</h2>
 						<div className="row">
 							<p className="col-12 col-lg-11 f14">
@@ -149,9 +149,12 @@ const Contact = () => {
 							</li>
 						</ul>
 					</div>
-					<div className="col-6">
+					<div className="col-12 col-md-6">
 						<div className="row">
-							<form onSubmit={handleSubmit(onSubmit)} className="col-9 mx-auto">
+							<form
+								onSubmit={handleSubmit(onSubmit)}
+								className="col-12 col-md-9 mx-auto"
+							>
 								<h2 className="fw-bold mb-4">Send us a message</h2>
 
 								<div className="row gy-4">
@@ -182,7 +185,7 @@ const Contact = () => {
 									})}
 								</div>
 
-								<div className="col-12 mt-5">
+								<div className="col-12 mt-4 mt-md-5">
 									<button type="submit">{status}</button>
 								</div>
 							</form>

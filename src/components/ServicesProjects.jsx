@@ -33,11 +33,11 @@ const ServicesProjects = () => {
 		<ComponentLayout parentClass="service_projects_container">
 			<h1 className="text-center fw-bold color1">Services Projects</h1>
 			<br />
-			<div className="row gx-4">
+			<div className="row gx-4 gy-4">
 				{servicesProjects.map((content, i) => {
 					const { img, para, title } = content;
 					return (
-						<div className="col-3" key={i}>
+						<div className="col-6 col-md-3" key={i}>
 							<div className="service_card d-flex flex-column align-items-center justify-content-center px-3">
 								<img src={img} alt="" />
 								<h6 className="SegoeUI fw600 f20 color1 text-center mt-3">

@@ -23,11 +23,11 @@ const Gallery = () => {
 					<h1 className="text-center fw-bold color1">Gallery</h1>
 					<br />
 
-					<div className="row gy-4">
-						<div className="col-5">
+					<div className="row gy-4 mb-5 mb-md-0">
+						<div className="col-12 col-md-5">
 							<img className="w-100" src={i1} alt="" />
 						</div>
-						<div className="col-7">
+						<div className="col-12 col-md-7">
 							<div className="row gy-4">
 								<div className="col-6">
 									<img className="w-100" src={i2} alt="" />
@@ -44,7 +44,7 @@ const Gallery = () => {
 							</div>
 						</div>
 
-						<div className="col-7">
+						<div className="col-12 col-md-7">
 							<div className="row gy-4">
 								<div className="col-6">
 									<img className="w-100" src={i6} alt="" />
@@ -60,13 +60,13 @@ const Gallery = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-5">
+						<div className="col-12 col-md-5">
 							<img className="w-100" src={i10} alt="" />
 						</div>
 					</div>
 
-					<div className="row mt-4 position-relative">
-						<div className="col-8">
+					<div className="row gy-4 mt-2 mt-md-4 position-relative">
+						<div className="col-12 col-sm-8 mx-auto">
 							<div className="gallery_detail">
 								<p className="mb-0 fw500">
 									Lorem Ipsum is simply dummy text of the printing and
@@ -85,7 +85,7 @@ const Gallery = () => {
 								</p>
 							</div>
 						</div>
-						<div className="col-4">
+						<div className="col-12 col-md-4">
 							<img className="w-100" src={i11} alt="" />
 						</div>
 					</div>

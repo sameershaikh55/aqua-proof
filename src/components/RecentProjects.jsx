@@ -13,10 +13,10 @@ const RecentProjects = () => {
 			<h1 className="text-center fw-bold color1">Recent Projects</h1>
 			<br />
 
-			<div className="row">
+			<div className="row gy-4">
 				{recentProjects.map((content, i) => {
 					return (
-						<div key={i} className="col-3">
+						<div key={i} className="col-6 col-md-3">
 							<img className="w-100" src={content} alt="" />
 						</div>
 					);
