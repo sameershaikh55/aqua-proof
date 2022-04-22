@@ -5,6 +5,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 @font-face {
@@ -176,7 +178,21 @@ html {
 }
 
 .header_container {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  width: 100%;
   padding: 1rem 0rem 0.4rem 0rem;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+}
+
+.header_container * {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .header_container img {
@@ -185,6 +201,19 @@ html {
 
 .header_container ul li a {
   color: #35363f;
+}
+
+.header_container.sticky {
+  -webkit-box-shadow: 1px 1px 8px #cccccc75;
+          box-shadow: 1px 1px 8px #cccccc75;
+}
+
+.header_container.sticky img {
+  max-width: 80px;
+}
+
+.header_under {
+  height: 102px;
 }
 
 .hero_Container {
@@ -500,5 +529,54 @@ html {
   -webkit-box-shadow: 1px 1px 10px #70707054;
           box-shadow: 1px 1px 10px #70707054;
   border-radius: 20px;
+}
+
+.contact_page_inner_container {
+  padding: 6rem 0rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #dfeefb), color-stop(50%, whitesmoke));
+  background: linear-gradient(90deg, #dfeefb 50%, whitesmoke 50%);
+}
+
+.contact_page_inner_container .inp_container input {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 0.6rem;
+  height: 40px;
+}
+
+.contact_page_inner_container .inp_container input:focus {
+  outline: none;
+}
+
+.contact_page_inner_container .inp_container textarea {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 0.6rem;
+}
+
+.contact_page_inner_container .inp_container textarea:focus {
+  outline: none;
+}
+
+.contact_page_inner_container button[type="submit"] {
+  background: #499fec;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.contact_page_inner_container .list img {
+  max-width: 25px;
+}
+
+.contact_page_inner_container .errorMessage {
+  color: #f70000;
+  font-weight: 600;
+  position: absolute;
+  right: 0%;
+  bottom: -16px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=styles.css.map */

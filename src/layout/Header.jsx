@@ -5,9 +5,18 @@ import logo from "../assets/images/logo.svg";
 import urls from "./urls.json";
 
 const Header = () => {
+	// FOR NAVBAR SCROLLING EFFECT START
+	window.addEventListener("scroll", function () {
+		var header = document.querySelector(".header_container");
+		if (header !== null) {
+			header.classList.toggle("sticky", window.scrollY > 1);
+		}
+	});
+	// FOR NAVBAR SCROLLING EFFECT END
+
 	return (
 		<ComponentLayout parentClass="header_container">
-			<div className="d-flex justify-content-between align-items-end">
+			<div className="d-flex justify-content-between align-items-end w-100">
 				<div>
 					<Link to="/">
 						<img src={logo} alt="logo" />

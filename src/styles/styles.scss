@@ -5,6 +5,7 @@
 	margin: 0%;
 	box-sizing: border-box;
 	font-family: "Open Sans", sans-serif;
+	transition: 0.4s;
 }
 
 // VARIABLES START
@@ -176,7 +177,18 @@ html {
 
 // HEADER START
 .header_container {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
 	padding: 1rem 0rem 0.4rem 0rem;
+	z-index: 2;
+	display: flex;
+	background: #fff;
+
+	* {
+		transition: 0.4s;
+	}
 
 	img {
 		max-width: 120px;
@@ -185,6 +197,18 @@ html {
 	ul li a {
 		color: #35363f;
 	}
+}
+
+.header_container.sticky {
+	box-shadow: 1px 1px 8px #cccccc75;
+
+	img {
+		max-width: 80px;
+	}
+}
+
+.header_under {
+	height: 102px;
 }
 // HEADER END
 
@@ -505,3 +529,60 @@ html {
 	}
 }
 // GALLERY END
+
+// CONTACT START
+.contact_page_inner_container {
+	padding: 6rem 0rem;
+	background: linear-gradient(
+		90deg,
+		rgba(223, 238, 251, 1) 50%,
+		rgba(245, 245, 245, 1) 50%
+	);
+
+	.inp_container {
+		input {
+			background: #ffffff;
+			border: 1px solid #e0e0e0;
+			padding: 0.6rem;
+			height: 40px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+		textarea {
+			background: #ffffff;
+			border: 1px solid #e0e0e0;
+			padding: 0.6rem;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	button[type="submit"] {
+		background: #499fec;
+		border: none;
+		color: #fff;
+		padding: 0.8rem 2rem;
+		border-radius: 10px;
+		font-size: 18px;
+	}
+
+	.list {
+		img {
+			max-width: 25px;
+		}
+	}
+
+	.errorMessage {
+		color: #f70000;
+		font-weight: 600;
+		position: absolute;
+		right: 0%;
+		bottom: -16px;
+		font-size: 12px;
+	}
+}
+// CONTACT END
