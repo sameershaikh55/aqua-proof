@@ -24,21 +24,21 @@ const Gallery = () => {
 					<br />
 
 					<div className="row gy-4 mb-5 mb-md-0">
-						<div className="col-12 col-md-5">
+						<div className="col-12 col-md-5 img_cont">
 							<img className="w-100" src={i1} alt="" />
 						</div>
 						<div className="col-12 col-md-7">
 							<div className="row gy-4">
-								<div className="col-6">
+								<div className="col-6 img_cont">
 									<img className="w-100" src={i2} alt="" />
 								</div>
-								<div className="col-6">
+								<div className="col-6 img_cont">
 									<img className="w-100" src={i3} alt="" />
 								</div>
-								<div className="col-6">
+								<div className="col-6 img_cont">
 									<img className="w-100" src={i4} alt="" />
 								</div>
-								<div className="col-6">
+								<div className="col-6 img_cont">
 									<img className="w-100" src={i5} alt="" />
 								</div>
 							</div>
@@ -46,21 +46,21 @@ const Gallery = () => {
 
 						<div className="col-12 col-md-7">
 							<div className="row gy-4">
-								<div className="col-6">
+								<div className="col-6 img_cont">
 									<img className="w-100" src={i6} alt="" />
 								</div>
-								<div className="col-6">
+								<div className="col-6 img_cont">
 									<img className="w-100" src={i7} alt="" />
 								</div>
-								<div className="col-6">
+								<div className="col-6 img_cont">
 									<img className="w-100" src={i8} alt="" />
 								</div>
-								<div className="col-6">
+								<div className="col-6 img_cont">
 									<img className="w-100" src={i9} alt="" />
 								</div>
 							</div>
 						</div>
-						<div className="col-12 col-md-5">
+						<div className="col-12 col-md-5 img_cont">
 							<img className="w-100" src={i10} alt="" />
 						</div>
 					</div>

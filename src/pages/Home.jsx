@@ -1,7 +1,6 @@
 import React from "react";
 
 // COMP.
-import Hero from "../layout/Hero";
 import Clients from "../components/Clients";
 import Location from "../components/Location";
 import RecentProjects from "../components/RecentProjects";

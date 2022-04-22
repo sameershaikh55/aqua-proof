@@ -384,6 +384,23 @@ html {
           box-shadow: 1px 1px 10px #70707054;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  position: relative;
+  transition: 0.4s;
+}
+
+.service_projects_container .service_card::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  background: #007bbc;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
 .service_projects_container .service_card img {
@@ -393,9 +410,9 @@ html {
      object-fit: cover;
 }
 
-.service_projects_container .service_card:hover {
-  -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
+.service_projects_container .service_card:hover::after {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
 }
 
 .service_projects_container .below_description {
@@ -404,6 +421,27 @@ html {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.recent_projects_container {
+  /* Colorize-zoom Container */
+  /* The Transformation */
+}
+
+.recent_projects_container .img-hover-zoom--colorize img {
+  -webkit-transition: -webkit-transform 0.5s, -webkit-filter 1.5s ease-in-out;
+  transition: -webkit-transform 0.5s, -webkit-filter 1.5s ease-in-out;
+  transition: transform 0.5s, filter 1.5s ease-in-out;
+  transition: transform 0.5s, filter 1.5s ease-in-out, -webkit-transform 0.5s, -webkit-filter 1.5s ease-in-out;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.recent_projects_container .img-hover-zoom--colorize:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
 }
 
 .services_taken_figures_container {
@@ -545,10 +583,12 @@ html {
   background: linear-gradient(10deg, #499fec 0%, rgba(255, 255, 255, 0) 50%);
   position: absolute;
   left: 0%;
-  top: 0%;
   right: 0%;
   bottom: 0%;
   border-radius: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  height: 100%;
 }
 
 .about_page_container .row .about_card img {
@@ -565,6 +605,16 @@ html {
   z-index: 1;
 }
 
+.about_page_container .row .about_card:hover::after {
+  height: 0px;
+  bottom: 0%;
+  opacity: 0;
+}
+
+.about_page_container .row .about_card:hover p {
+  opacity: 0;
+}
+
 .services_page_container .service_card {
   min-height: 1px;
   height: 100%;
@@ -574,6 +624,11 @@ html {
   border-radius: 22px 22px 20px 20px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+.services_page_container .service_card .img_cont {
+  position: relative;
+  overflow: hidden;
 }
 
 .services_page_container .service_card img {
@@ -590,6 +645,40 @@ html {
 .services_page_container .service_card:hover {
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
+}
+
+.services_page_container .service_card:hover .img_cont:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -500px;
+  width: 100px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-transform: skew(-50deg);
+          transform: skew(-50deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-animation: shine 1s ease infinite;
+          animation: shine 1s ease infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 655px;
+  }
+}
+
+@keyframes shine {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 655px;
+  }
 }
 
 .feature_page_head_container {
@@ -619,6 +708,36 @@ html {
   -webkit-box-shadow: 1px 1px 10px #70707054;
           box-shadow: 1px 1px 10px #70707054;
   border-radius: 20px;
+}
+
+.gallery_page_container .img_cont {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery_page_container .img_cont:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -500px;
+  width: 100px;
+  height: 1000px;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-transform: skew(-50deg);
+          transform: skew(-50deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-animation: shine 1s ease infinite;
+          animation: shine 1s ease infinite;
+}
+
+@keyframes shine {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 655px;
+  }
 }
 
 .contact_page_inner_container {

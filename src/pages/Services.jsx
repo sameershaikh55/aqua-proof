@@ -67,7 +67,9 @@ const Services = () => {
 							return (
 								<div className="col-12 col-sm-6 col-md-4" key={i}>
 									<div className="service_card">
-										<img className="w-100" src={content.img} alt="" />
+										<div className="img_cont">
+											<img className="w-100" src={content.img} alt="" />
+										</div>
 										<div className="py-3 px-3">
 											<h6 className="fw-bold color1 fw600 py-2">
 												{content.title}

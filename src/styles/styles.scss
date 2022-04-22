@@ -374,6 +374,20 @@ html {
 		background: #fff;
 		box-shadow: 1px 1px 10px #70707054;
 		transition: 0.4s;
+		position: relative;
+		transition: 0.4s;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0%;
+			top: 0%;
+			height: 100%;
+			width: 100%;
+			background: #007bbc;
+			z-index: -1;
+			transition: transform 0.4s ease-in-out;
+		}
 
 		img {
 			max-width: 90px;
@@ -381,8 +395,8 @@ html {
 			object-fit: cover;
 		}
 
-		&:hover {
-			transform: translateY(-6px);
+		&:hover::after {
+			transform: rotate(5deg);
 		}
 	}
 
@@ -395,6 +409,22 @@ html {
 	}
 }
 // SERVICE PROJECTS END
+
+// RECENT PROJECTS START
+.recent_projects_container {
+	/* Colorize-zoom Container */
+	.img-hover-zoom--colorize img {
+		transition: transform 0.5s, filter 1.5s ease-in-out;
+		filter: grayscale(100%);
+	}
+
+	/* The Transformation */
+	.img-hover-zoom--colorize:hover img {
+		filter: grayscale(0);
+		transform: scale(1.08);
+	}
+}
+// RECENT PROJECTS END
 
 // SERVICE TOKENS START
 .services_taken_figures_container {
@@ -542,10 +572,11 @@ html {
 				);
 				position: absolute;
 				left: 0%;
-				top: 0%;
 				right: 0%;
 				bottom: 0%;
 				border-radius: 20px;
+				transition: 0.4s;
+				height: 100%;
 			}
 
 			img {
@@ -559,6 +590,18 @@ html {
 				left: 1rem;
 				bottom: 0%;
 				z-index: 1;
+			}
+
+			&:hover {
+				&::after {
+					height: 0px;
+					bottom: 0%;
+					opacity: 0;
+				}
+
+				p {
+					opacity: 0;
+				}
 			}
 		}
 	}
@@ -575,6 +618,11 @@ html {
 		border-radius: 22px 22px 20px 20px;
 		transition: 0.4s;
 
+		.img_cont {
+			position: relative;
+			overflow: hidden;
+		}
+
 		img {
 			border-radius: 20px 20px 0px 0px;
 			max-height: 190px;
@@ -587,6 +635,30 @@ html {
 
 		&:hover {
 			transform: translateY(-6px);
+
+			.img_cont {
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: -500px;
+					width: 100px;
+					height: 500px;
+					background: rgba(255, 255, 255, 0.4);
+					transform: skew(-50deg);
+					transition: 1s;
+					animation: shine 1s ease infinite;
+				}
+
+				@keyframes shine {
+					from {
+						left: -500px;
+					}
+					to {
+						left: 655px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -619,6 +691,35 @@ html {
 		padding: 2rem 1.5rem;
 		box-shadow: 1px 1px 10px #70707054;
 		border-radius: 20px;
+	}
+
+	.img_cont {
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -500px;
+				width: 100px;
+				height: 1000px;
+				background: rgba(255, 255, 255, 0.4);
+				transform: skew(-50deg);
+				transition: 1s;
+				animation: shine 1s ease infinite;
+			}
+
+			@keyframes shine {
+				from {
+					left: -500px;
+				}
+				to {
+					left: 655px;
+				}
+			}
+		}
 	}
 }
 // GALLERY END

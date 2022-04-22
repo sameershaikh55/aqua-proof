@@ -17,7 +17,9 @@ const RecentProjects = () => {
 				{recentProjects.map((content, i) => {
 					return (
 						<div key={i} className="col-6 col-md-3">
-							<img className="w-100" src={content} alt="" />
+							<div className="img-hover-zoom--colorize">
+								<img className="w-100" src={content} alt="" />
+							</div>
 						</div>
 					);
 				})}

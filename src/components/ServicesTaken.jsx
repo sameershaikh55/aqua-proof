@@ -1,4 +1,6 @@
 import React from "react";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor-v2";
 import ComponentLayout from "../layout/ComponentLayout";
 
 const ServicesTaken = () => {
@@ -12,9 +14,27 @@ const ServicesTaken = () => {
 				scrambled it to make a type specimen book.
 			</p>
 			<ul className="list-unstyled row services_taken_figures_states mt-4 align-items-center">
-				<li className="col-4 text-center fw600 color1 display-4">1360</li>
-				<li className="col-4 text-center fw600 color1 display-4">1200</li>
-				<li className="col-4 text-center fw600 color1 display-4">1140</li>
+				<li className="col-4 text-center fw600 color1 display-4">
+					<VisibilitySensor>
+						{({ isVisible }) => (
+							<div>{isVisible ? <CountUp end={1360} /> : 0}</div>
+						)}
+					</VisibilitySensor>
+				</li>
+				<li className="col-4 text-center fw600 color1 display-4">
+					<VisibilitySensor>
+						{({ isVisible }) => (
+							<div>{isVisible ? <CountUp end={1200} /> : 0}</div>
+						)}
+					</VisibilitySensor>
+				</li>
+				<li className="col-4 text-center fw600 color1 display-4">
+					<VisibilitySensor>
+						{({ isVisible }) => (
+							<div>{isVisible ? <CountUp end={1140} /> : 0}</div>
+						)}
+					</VisibilitySensor>
+				</li>
 			</ul>
 		</ComponentLayout>
 	);
